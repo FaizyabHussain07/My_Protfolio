@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Faizyab's Professional Portfolio">
+    <title>Faizyab's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        /* Profile Image */
+        .profile-image1 {
+            position: absolute;
+            left: 100px;
+            top: 15%;
+            transform: translateY(-50%);
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #fff;
+        }
+
+        .profile-image {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            margin-bottom: 10px;
+        }
+
+        /* Navigation */
+        nav {
+            background: #34495e;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #01ffcc;
+            border-bottom: 2px solid #01ffcc;
+        }
+
+        /* Sections */
+        section#about {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            padding: 12px;
+            background: #1a6ebc;
+            color: #fff;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #16a085;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 10px;
+            /* padding: 0px; */
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            margin-bottom: 10px;
+        }
+
+        .footer-section h3 {
+            color: #010a0f;
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section a {
+            color: rgb(9, 3, 63);
+            margin-left: 2px;
+            font-size: 17px;
+            text-decoration: none;
+        }
+
+        .social-links .fa-facebook {
+            color: rgb(63, 123, 190);
+            font-size: 20px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-links .fa-twitter {
+            color: rgb(139, 177, 221);
+            font-size: 20px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-links .fa-instagram {
+            color: rgb(187, 55, 14);
+            font-size: 20px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-links .fa-linkedin {
+            color: rgb(7, 3, 63);
+            font-size: 20px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+.social-links .fa-github{
+    color: rgb(0, 0, 0);
+            font-size: 20px;
+            margin: 0 10px;
+            transition: color 0.3s;
+}
+        .social-links a:hover {
+            color: #01ffcc;
+        }
+
+
+        .container-last {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .footer-bottom {
+
+            border-top: 2px solid #000000;
+            margin-top: 5px;
+            padding-top: 10px;
+            color: #fff;
+            text-align: center;
+
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <img src="WhatsApp Image 2025-02-04 at 1.11.53 AM.jpeg" alt="Faizyab's Profile" class="profile-image1">
+        <h1>Faizyab Portfolio</h1>
+        <p>Computer Science Student | Quran Tutor | Software Developer</p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="index.html">About Us</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="skill.html">Skills</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>ABOUT ME</h2>
+        <p>Hello! I'm Faizyab, a computer science student passionate about <b>Software Development</b> and <b>Quranic
+                Teaching</b>. With 5+ years of experience in Quran tutoring, I specialize in Tajweed and memorization.
+            My goal is to integrate technology and education to enhance learning experiences.</p>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+        <form class="contact-form" action="https://formspree.io/f/meoekbne" method="POST">
+            <h2>CONTACT US</h2>
+            <input type="text" name="name" placeholder="Enter Name" required>
+            <input type="email" name="email" placeholder="Enter Email" required>
+            <textarea name="message" rows="5" placeholder="Enter Message Here" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    
+    <script>
+        document.querySelector(".contact-form").addEventListener("submit", async function(event) {
+            event.preventDefault();
+    
+            let form = event.target;
+            let formData = new FormData(form);
+    
+            try {
+                let response = await fetch(form.action, {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+    
+                if (response.ok) {
+                    alert("Your message has been sent successfully!");
+                    form.reset();
+                } else {
+                    alert("Oops! Something went wrong. Please try again.");
+                }
+            } catch (error) {
+                alert("Network error! Please check your connection.");
+            }
+        });
+    </script>
+    
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="WhatsApp Image 2025-02-04 at 1.11.53 AM.jpeg" alt="" class="profile-image">
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">About Us</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="skill.html">Skills</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-phone"></i><a> +92 3352811970</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:mfaizyabhussain@gmail.com">
+                        mfaizyabhussain@gmail.com</a></p>
+                <p><i class="fas fa-map-marker-alt"></i><a> Gulshan-iqbal, Abul-hasan-isphani road,<br> Karachi,
+                        Pakistan.</a></p>
+            </div>
+            <div class="footer-section social-links">
+                <h3>Follow Me</h3>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container container-last">
+                <div>
+                    <p>© 2024 Faizyab. All Rights Reserved.</p>
+                </div>
+                <div>
+                    <p>Privacy policy | Terms & Conditions</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
